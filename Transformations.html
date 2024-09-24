@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            font-family:  sans-serif;
+        }
+        .nav{
+            background-color: #636057;
+            height: 30vh;
+            width: 100%;
+
+        }
+        .h {
+            position:relative;
+            top: 30px;
+            left: 40px;
+            display: flex;
+            width: fit-content;
+            color: white;
+            justify-content: flex-start;
+            align-items: center;
+        
+        } 
+        .h img{
+            height: 100px;
+            width: 100px;
+        }
+        .menu{
+            display: flex;
+            position:relative;
+            top:0.4vh;
+            background-color: #636057;
+            height: 10vh;
+            width:100%;
+
+        }
+        .menu div{
+            width: 100%;
+            height: 100%;
+        }
+        .menu div a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* text-decoration: none;
+            color: white; */
+            font-size: 22px;
+            height: 100%;
+            width:100%;
+            
+           
+        }
+        .main{
+            position:relative;
+            top: 2px;;
+            height:300vh;
+
+        }
+        
+        .menu div:hover {
+            background-color: red;
+        }
+        .footer{
+            display:flex;
+            position:relative;
+            justify-content: space-between;
+            top:20vh;
+            height:60vh;
+            width:100%;
+            background-color: #636057;
+            color: white;
+            
+
+        }
+        .Links{
+            position: relative;
+            top: 80px;
+            height: 70%;
+            margin-left: 200px;
+            
+            
+        }
+        .Links ul{
+            display: flex;
+            font-size: 18px;
+            flex-direction: column;
+            align-items: center;
+            list-style-type: none;
+            gap: 10px;
+            margin-top: 35px;
+            text-decoration: none;
+
+
+        }
+        .Links a ,.menu a{
+            text-decoration: none;
+            color: white;
+        }
+        
+        .NewsLetter{
+            position: relative;
+            top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            gap: 40px;
+            height: 70%;
+            align-items: center;
+
+        }
+        .NewsLetter div form{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+        .Media{
+            position: relative;
+            top:80px;
+            height: 70%;
+            margin-right: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+         i{
+            font-size: 22px;
+            margin: 10px;
+            cursor: pointer;
+        } 
+        input{
+            padding: 10px 80px ;
+            border-radius: 5px ;border: none;
+        }
+        ::placeholder{
+            text-align: center;
+        }
+        button{
+            padding: 10px 30px; 
+            border-radius: 20px; 
+            border: 1px solid whitesmoke;
+            background: transparent;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="h">
+           <a href="./index.html"> <img src="https://pnganime.com/web/images/l/luffy-gear-5-colored.png" alt=""></a>
+            <h2>Transformations</h2>
+        </div>
+
+    </div>
+    <div class="menu">
+        <div><a href="./Devil Fruit.html">Devil Fruit</a></div>
+        <div><a href="./Transformations.html">Transformations</a></div>
+        <div><a href="./Haki.html">Haki</a></div>
+        <div><a href="./Contact US.html">Contact Us</a></div>
+        <div style="margin-right: 200px;"><a href="https://www.google.com/">Help</a></div>
+        
+
+    </div>
+    <div class="main">
+        <table>
+            <tr>
+                <td><img src="data:image/jpeg;base64,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" alt="" width="300px" height="168px"></td>
+                <td><h3>Base form(no gears)</h3></td>
+                <td>
+                Base form means that he is in his orginal form without any transfomations that he has such as gear 2,3,4 and 5. In his base form it he is only limited to using haki and his streching abilities. Gears are the names of his transformations.
+                </td>
+            </tr>
+        </table>
+        <h1 style="text-align: center;">↓</h1>
+        <table>
+            <tr>
+                <td><img src="https://api.duniagames.co.id/api/content/upload/file/8236748991665033441.jpg" alt="" width="300px" height="125px"></td>
+                <td><h3>Gear 2</h3></td>
+                <td >
+                    This technique involves Luffy speeding up the blood flow in all or selected body parts, in order to provide them with more oxygen and nutrients. This makes him much faster and more powerful. The technique uses even more oxygen and energy, 
+                    using up more food and causing Luffy to pant heavily. The increase in his metabolism causes him to be hungrier than usual or even have a paralysis type effect after prolonged use of it. In Luffy's case, his organs and blood vessels are made 
+                    of rubber allowing them to expand and contract at greater rates without tearing. Essentially, Luffy increases the blood flow by forcing more blood through his blood vessels thus increase his fighting ability. This mode's enhancements to Luffy's 
+                    physiology giving him the ability to use a new, stronger set of techniques
+                </td>
+            </tr>
+        </table>
+        <h1 style="text-align: center;">↓</h1>
+        <table>
+            <tr>
+                <td><img src="data:image/jpeg;base64,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" alt="" width="300px" height="168px"></td>
+                <td><h3>Gear 3</h3></td>
+                <td >
+                    Luffy corks his mouth with his thumb, bites into his thumb joint (making a small opening) and blows hard into his bones, which inflates his arm. He is then able to transfer the air through his entire body, requiring the torso to act as an interface 
+                    for his various limbs. Luffy blows so much air into his body that when they are all focused on a single limb, they become the size equivalent to (or greater than) that of a giant's, if anything resembling Oars' size. Used with his already-strong physiology, 
+                    this apparently gives his arm more mass and a larger area to attack with far greater strength
+                </td>
+            </tr>
+        </table>
+        <h1 style="text-align: center;">↓</h1>
+        <table>
+            <tr>
+                <td><img src="https://staticg.sportskeeda.com/editor/2022/09/62910-16629616174769.png?w=840" alt="" width="420px" height="238px"></td>
+                <td><h3>Gear 4(Bounce-Man)</h3></td>
+                <td >
+                    Luffy's first Gear 4 form is called Bounce-Man: Luffy's proportions become warped, and his body becomes much larger in size, with his arms, upper torso, and legs coated in Busoshoku Haki. As a side-effect, he is incapable of standing still on the ground,
+                     and instead constantly bounds on the spot. This form was created in order to combat the many powerful and large animals on Rusukaina.
+
+
+                </td>
+            </tr>
+        </table>
+        <h1 style="text-align: center;">↓</h1>
+        <table>
+            <tr>
+                <td><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/51158316-fd7e-48ca-b5fe-8542e9dfe357/dfcr0y1-e627ad71-5e49-4557-af6a-5393f091a432.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUxMTU4MzE2LWZkN2UtNDhjYS1iNWZlLTg1NDJlOWRmZTM1N1wvZGZjcjB5MS1lNjI3YWQ3MS01ZTQ5LTQ1NTctYWY2YS01MzkzZjA5MWE0MzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.59tZkErSR2ts7w8QCkX3XCeHrOKgYgt5zS4EtTpY2w8" alt="" width="241px" height="193px"></td>
+                <td><h3>Gear 4(Tank-Man)</h3></td>
+                <td >
+                    During his battle with Charlotte Cracker, Luffy revealed another form of Gear 4 known as Tankman (タンクマン, Tankuman?, English versions: Tank-Man). Currently, the base 
+                    form of "Tankman" is unknown, since the only time it has been used was after Luffy ate Cracker's Biscuits to the point where he was completely full and used his "Manpuku Version" 
+                    form.[5] Due to the increase in Luffy's metabolism Gear 4 causes, he is able to leave his Tankman form in a short time after using it. This is the case when Luffy was able to burn 
+                    off the massive amount of biscuits he had eaten in his fight with Cracker shortly after he defeated
+                </td>
+            </tr>
+        </table>
+        <h1 style="text-align: center;">↓</h1>
+        <table>
+            <tr>
+                <td><img src="https://e1.pxfuel.com/desktop-wallpaper/369/913/desktop-wallpaper-luffy-s-new-gear-4-form-gear-4-snakeman.jpg" alt="" width="213px" height="271px"></td>
+                <td><h3>Gear 4(Snakeman)</h3></td>
+                <td >
+                    Gear 5 is his most fowerful form with the most unique powers awakened while he was fighting Kaido(Villian from One piece). It allows the person to become all white and make imagine come to reality. 
+                    In this awakened state you can make enything rubber with a touch, make yourself giant, and have incrediable strength. Some of these attacks such as GomuGomu no Gigant(RubberRubber giant), a technique 
+                    where you are a literal size of a giant. GomuGomu no Bajrang gun(Meaning Monkey God Kong) whilst using the giant form making your hand even bigger like gear 3 Luffy coats it with haki to deleiver his 
+                    most powerful attack than would literally obliterate anything.
+                </td>
+            </tr>
+        </table>
+        <h1 style="text-align: center;">↓</h1>
+        <table>
+            <tr>
+                <td><img src="https://www.comingsoon.net/wp-content/uploads/sites/3/2023/08/one-piece-gear-5.png" alt="" width="300px" height="168px"></td>
+                <td><h3>Gear 5</h3></td>
+                <td >During his battle with Charlotte Katakuri, Luffy revealed another form of Gear 4 known as Snakeman (蛇男スネイクマン, Suneikuman?, English versions: Snake-Man).[26] Unlike his other 
+                    two Gear 4 forms, Luffy does not significantly expand, with his forearms, legs, and upper torso being only slightly enlarged and the rest of his body retaining its normal proportions. 
+                    The spread of Haki is slightly more limited, as it does not appear to extend onto Luffy's shoulders and upper body. However, Luffy's hair becomes flame-shaped like his Haki and sticks up.
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <a href="https://onepiece.fandom.com/wiki/One_Piece_Wiki"> <h1 style="text-align: center;">All info site</h1></a>
+
+    </div>
+    <div class="footer">
+        <div class="Links">
+            <h3>USEFUL LINKS</h3>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+        <div class="NewsLetter">
+            <h3>NEWS LETTER</h3>
+            <div>
+                <form action="">
+                    <input type="text" placeholder="your email adress" required>
+                    <a href="#"><button >SUBSCRIBE NOW</button></a>
+                </form>
+            </div>
+        
+        </div>
+        <div class="Media">
+            <h3>Social Media</h3>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
